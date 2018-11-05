@@ -257,6 +257,49 @@ app.get("/", function(req, res){
   console.log("APP RUNNING");
 })
 
+app.get("/get", function(req, res){
+  var test = {
+    "recipe": {
+        "publisher": "A Spicy Perspective",
+        "f2f_url": "http://food2fork.com/view/aa60ec",
+        "ingredients": [
+            "For the Slaw:",
+            " cup hot water",
+            " cup sugar",
+            " cup white vinegar",
+            "1 teaspoon salt",
+            "1 firm ripe mango, peeled and cut julienne",
+            "1 cup jicama, julienne",
+            " cup radicchio, julienne",
+            "For the Butter Chicken:",
+            "2 half sticks Land O Lakes",
+            "Salted Butter (",
+            "1/2",
+            "cup)",
+            "1 onion, diced",
+            "4 cloves garlic, minced",
+            "1  tbs. garam masala*",
+            " tsp. cinnamon",
+            "1 tsp. salt",
+            "28-ounces can crushed tomatoes",
+            "1  tablespoons tomato paste",
+            "1  pounds chicken breasts (6 breasts)",
+            " cup heavy cream",
+            "24 small rolls, halved",
+            "Cilantro leaves for garnish"
+        ],
+        "source_url": "http://www.aspicyperspective.com/2013/03/butter-chicken-sliders-big-land-olakes-giveaway.html",
+        "recipe_id": "aa60ec",
+        "image_url": "http://static.food2fork.com/IMG_35501180x1803eee.jpg",
+        "social_rank": 99.99888808120132,
+        "publisher_url": "http://www.aspicyperspective.com",
+        "title": "Butter Chicken Sliders with Pickled Mango Slaw"
+    }
+}
+
+  res.send(test)
+})
+
 app.get("/api/search", function(req, res){
 
   var api_key = "1e5917ecde2177374331c2ad9f6c2485";
